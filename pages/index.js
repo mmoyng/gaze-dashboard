@@ -7,7 +7,7 @@ export default function Home() {
 
   useEffect(() => {
     const fetchData = () => {
-      fetch("https://gaze-dashboard-xpf8.vercel.app/")
+      fetch("/api/gaze-data")  // 중계 서버에서 Lambda 호출
         .then(res => res.json())
         .then(json => {
           try {
